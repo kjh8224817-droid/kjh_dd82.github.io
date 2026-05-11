@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 - 개발 블로그</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Prism.js CSS (CDN) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">My Blog</a></h1>
+        <div class="header-controls">
+            <button id="theme-toggle">🌗</button>
+        </div>
+    </header>
+    
+    <main>
+        <article id="post-content">
+            <!-- 게시글 내용이 여기에 동적으로 추가됩니다. -->
+            <p>로딩 중...</p>
+        </article>
+        
+        <div id="giscus-container">
+            <!-- Giscus 댓글 시스템이 여기에 추가됩니다. -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My GitHub Blog</p>
+    </footer>
+
+    <!-- marked.js (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Prism.js (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    
+    <script src="js/theme.js"></script>
+    <script src="js/post-loader.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+[
+  {
+    "file": "example.md",
+    "title": "첫 번째 게시글",
+    "date": "2026-05-11",
+    "tags": [
+      "JavaScript",
+      "Web"
+    ],
+    "category": "Development",
+    "description": "첫 번째 게시글 설명입니다.",
+    "excerpt": "이것은 제 첫 번째 GitHub Pages 블로그 게시글입니다."
+  }
+]
