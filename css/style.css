@@ -1,53 +1,255 @@
-/* 기본 CSS 변수 설정 (라이트/다크 모드) */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
 :root {
-    --bg-color: #ffffff;
-    --text-color: #333333;
-    --link-color: #0066cc;
-    --header-bg: #f8f9fa;
-    --border-color: #e9ecef;
+    --bg-color: #fcfbf9; /* 밝고 따뜻한 베이지 */
+    --text-color: #3d3c3a; /* 차분한 그레이 */
+    --text-muted: #84827d; /* 중간 베이지 그레이 */
+    --link-color: #636159; 
+    --link-hover: #1a1a1a;
+    --header-bg: #f3f1eb; /* 헤더용 부드러운 베이지 */
+    --border-color: #e6e4de; /* 연한 경계선 */
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.03);
 }
 
 [data-theme="dark"] {
-    --bg-color: #121212;
-    --text-color: #e0e0e0;
-    --link-color: #66b3ff;
-    --header-bg: #1e1e1e;
-    --border-color: #333333;
+    --bg-color: #2b2a29; /* 따뜻한 다크 그레이 */
+    --text-color: #e8e6e1; /* 밝은 베이지 톤 텍스트 */
+    --text-muted: #9e9c97;
+    --link-color: #d6d3c4;
+    --link-hover: #ffffff;
+    --header-bg: #242322;
+    --border-color: #3f3e3a;
+    --card-bg: #333230;
+    --card-shadow: rgba(0, 0, 0, 0.2);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
     margin: 0;
     padding: 0;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
+/* Header Styling */
 header {
     background-color: var(--header-bg);
-    padding: 1rem 2rem;
+    padding: 1.2rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+    background-color: color-mix(in srgb, var(--header-bg) 85%, transparent);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 header a {
     color: var(--text-color);
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
+header a:hover {
+    color: var(--link-hover);
+}
+
+.header-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#search-input {
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#search-input:focus {
+    border-color: var(--text-muted);
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.03);
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+#theme-toggle:hover {
+    background-color: var(--border-color);
+    transform: rotate(15deg) scale(1.1);
+}
+
+/* Main Layout */
 main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    max-width: 760px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    min-height: calc(100vh - 200px);
 }
 
+/* Post List (index.html) */
+ul#post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+ul#post-list li {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px var(--card-shadow);
+    transition: all 0.3s ease;
+}
+
+ul#post-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px var(--card-shadow);
+    border-color: #d1cfc9;
+}
+
+[data-theme="dark"] ul#post-list li:hover {
+    border-color: #5c5b57;
+}
+
+ul#post-list h2 {
+    margin: 0 0 0.8rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+ul#post-list h2 a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+ul#post-list h2 a:hover {
+    color: var(--link-hover);
+}
+
+ul#post-list p {
+    margin: 0.5rem 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+ul#post-list p:last-child {
+    color: var(--text-color);
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+/* Post Content (post.html) */
+article#post-content {
+    background-color: var(--card-bg);
+    padding: 3rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px var(--card-shadow);
+}
+
+article#post-content h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    color: var(--text-color);
+    letter-spacing: -0.03em;
+}
+
+article#post-content h2 {
+    margin-top: 2.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+article#post-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+article#post-content a {
+    color: var(--link-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--text-muted);
+    transition: all 0.2s ease;
+}
+
+article#post-content a:hover {
+    color: var(--link-hover);
+    border-bottom-color: var(--link-hover);
+}
+
+article#post-content pre {
+    border-radius: 8px;
+    background-color: #f5f4f1 !important;
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] article#post-content pre {
+    background-color: #242322 !important;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 2rem;
+    padding: 2.5rem 1rem;
     font-size: 0.9rem;
-    color: #888;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    background-color: var(--header-bg);
+    margin-top: 4rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    article#post-content {
+        padding: 1.5rem;
+    }
+    
+    ul#post-list li {
+        padding: 1.5rem;
+    }
 }
