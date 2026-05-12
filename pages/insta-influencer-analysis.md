@@ -1,4 +1,16 @@
+---
+title: "인스타그램 인플루언서 효율 분석 - 누가 진짜 알짜일까?"
+date: "2026-05-12"
+slug: "insta-influencer-analysis"
+tags: ["데이터분석", "인스타그램", "마케팅효율"]
+category: "데이터분석"
+summary: "200명의 글로벌 인플루언서 데이터로 팔로워 대비 실제 반응률이 높은 카테고리를 분석했습니다."
+thumbnail: "images/insta-influencer-analysis-thumbnail.png"
+techStack: ["Python", "pandas", "matplotlib", "seaborn"]
+---
+
 # 🏷 인스타그램 인플루언서 효율 분석 - 누가 진짜 알짜일까?
+
 
 > 200명의 글로벌 인스타그램 인플루언서 데이터를 분석하여, 팔로워 수 대비 실제 반응률(효율)이 높은 카테고리와 인플루언서를 찾아냈습니다.
 

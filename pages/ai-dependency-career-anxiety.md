@@ -1,4 +1,16 @@
+---
+title: "AI 의존도와 취업 불안감 분석 - 도구인가 독인가?"
+date: "2026-05-12"
+slug: "ai-dependency-career-anxiety"
+tags: ["데이터분석", "pandas", "AI의존도", "취업불안감"]
+category: "데이터분석"
+summary: "15,000명의 대학생 데이터를 통해 AI 의존도가 실제 취업 준비도와 심리에 미치는 영향을 분석했습니다."
+thumbnail: "images/ai-dependency-career-anxiety-thumbnail.png"
+techStack: ["Python", "pandas", "matplotlib", "seaborn"]
+---
+
 # 🏷 AI 의존도와 취업 불안감 분석 - 도구인가 독인가?
+
 
 > 15,000명의 대학생 데이터를 통해 AI 의존도가 실제 취업 준비도와 심리에 미치는 영향을 분석했습니다.
 

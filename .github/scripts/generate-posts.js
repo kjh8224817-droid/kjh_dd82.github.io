@@ -79,13 +79,14 @@ const posts = files.map((filename) => {
     .trim();
 
   return {
-    file: filename,
+    slug: metadata.slug || filename.replace('.md', ''),
     title: metadata.title || filename.replace('.md', ''),
+    summary: metadata.summary || metadata.description || excerpt + (excerpt.length === 200 ? '...' : ''),
+    thumbnail: metadata.thumbnail || 'images/default-thumbnail.png',
     date: metadata.date || new Date().toISOString().split('T')[0],
     tags: Array.isArray(metadata.tags) ? metadata.tags : [],
     category: metadata.category || '',
-    description: metadata.description || '',
-    excerpt: excerpt + (excerpt.length === 200 ? '...' : ''),
+    techStack: Array.isArray(metadata.techStack) ? metadata.techStack : []
   };
 });
 
