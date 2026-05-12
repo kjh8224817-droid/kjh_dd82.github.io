@@ -31,7 +31,7 @@ techStack: ["Python", "pandas", "matplotlib", "seaborn"]
 ## 🔗 링크
 
 - 📓 [코랩 노트북 보기](https://colab.research.google.com/)
-- 🐙 [GitHub 레포지토리](https://github.com/)
+- 🐙 [GitHub 레포지토리](https://github.com/kjh8224817-droid/ai-dependency-analysis)
 
 ---
 

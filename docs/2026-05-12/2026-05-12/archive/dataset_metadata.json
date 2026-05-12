@@ -1,0 +1,11 @@
+{
+    "title": "AI Dependency and Career Anxiety Among Students",
+    "description": "A robust synthetic dataset simulating student behavior, AI adoption, career anxiety, and mental health indicators.",
+    "format": "csv",
+    "encoding": "UTF-8",
+    "num_rows": 15000,
+    "num_columns": 30,
+    "target_variable": "overall_career_readiness_score",
+    "missing_data_injected": true,
+    "generation_strategy": "Latent trait modeling with controlled noise and Z-score normalized targets"
+}

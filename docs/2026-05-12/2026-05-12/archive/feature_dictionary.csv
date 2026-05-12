@@ -1,0 +1,31 @@
+feature,type,description
+student_id,string,Unique identifier for each student
+age,integer,Age of the student (18-28)
+gender,categorical,Gender identity
+degree_type,categorical,Enrolled degree program level
+stream,categorical,Primary academic field of study
+year_of_study,integer,Current year of academic program (1-4)
+college_tier,categorical,Institutional tier/prestige classification
+urban_or_rural,categorical,Primary background setting
+daily_ai_tool_usage_hrs,float,Average daily hours spent using generative AI
+primary_ai_tools_used,categorical,Dominant AI tool utilized
+uses_ai_for_assignments,categorical,Frequency of using AI for graded coursework
+ai_replaces_own_thinking_score,integer,Self-reported score (1-5) on AI replacing critical thought
+ai_dependency_score,integer,Composite behavioral score (1-10) assessing reliance on AI
+placement_anxiety_score,integer,Anxiety level (1-10) regarding post-graduation employment
+fear_of_job_loss_to_ai,integer,Concern intensity (1-5) regarding automation obsolescence
+career_clarity_score,integer,Understanding level (1-10) of personal career trajectory
+internship_experience,integer,Total count of completed formal internships
+weekly_job_application_count,integer,Number of job/internship applications submitted weekly
+resume_confidence_score,integer,Self-assessed strength (1-5) of professional CV
+interview_anxiety_score,integer,Nervousness level (1-10) experienced during interviews
+daily_study_hours,float,Hours dedicated to core curriculum per day
+self_learning_hours_per_week,float,Hours spent acquiring out-of-curriculum skills per week
+skill_development_courses_taken,integer,Count of completed external certifications
+social_media_hrs_per_day,float,Daily recreational social media consumption hours
+sleep_hours,float,Average nightly sleep duration
+stress_level,integer,General self-reported stress level (1-10)
+burnout_score,integer,Academic exhaustion and emotional detachment score (1-10)
+motivation_score,integer,Intrinsic academic drive score (1-10)
+seeks_career_counseling,float,Binary indicator (0.0 or 1.0) of seeking professional guidance
+overall_career_readiness_score,float,TARGET VARIABLE: Composite metric of professional preparedness (1-10)
