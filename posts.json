@@ -1,5 +1,15 @@
 [
   {
+    "slug": "ai-dependency-career-anxiety",
+    "title": "AI 의존도와 취업 불안감 분석 - 도구인가 독인가?",
+    "summary": "15,000명의 대학생 데이터를 통해 AI 의존도가 실제 취업 준비도와 심리에 미치는 영향을 분석했습니다.",
+    "thumbnail": "images/ai-dependency-career-anxiety-thumbnail.png",
+    "date": "2026-05-12",
+    "tags": ["데이터분석", "pandas", "AI의존도", "취업불안감"],
+    "category": "데이터분석",
+    "techStack": ["Python", "pandas", "matplotlib", "seaborn"]
+  },
+  {
     "slug": "insta-influencer-analysis",
     "title": "인스타그램 인플루언서 효율 분석 - 누가 진짜 알짜일까?",
     "summary": "200명의 글로벌 인플루언서 데이터로 팔로워 대비 실제 반응률이 높은 카테고리를 분석했습니다.",
