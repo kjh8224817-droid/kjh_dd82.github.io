@@ -1,14 +1,22 @@
 [
   {
-    "file": "example.md",
+    "slug": "insta-influencer-analysis",
+    "title": "인스타그램 인플루언서 효율 분석 - 누가 진짜 알짜일까?",
+    "summary": "200명의 글로벌 인플루언서 데이터로 팔로워 대비 실제 반응률이 높은 카테고리를 분석했습니다.",
+    "thumbnail": "images/insta-influencer-analysis-thumbnail.png",
+    "date": "2026-05-12",
+    "tags": ["데이터분석", "인스타그램", "마케팅효율"],
+    "category": "데이터분석",
+    "techStack": ["Python", "pandas", "matplotlib", "seaborn"]
+  },
+  {
+    "slug": "example",
     "title": "첫 번째 게시글",
+    "summary": "첫 번째 게시글 설명입니다.",
+    "thumbnail": "images/example-thumbnail.png",
     "date": "2026-05-11",
-    "tags": [
-      "JavaScript",
-      "Web"
-    ],
+    "tags": ["JavaScript", "Web"],
     "category": "Development",
-    "description": "첫 번째 게시글 설명입니다.",
-    "excerpt": "이것은 제 첫 번째 GitHub Pages 블로그 게시글입니다."
+    "techStack": ["HTML", "CSS", "JS"]
   }
 ]

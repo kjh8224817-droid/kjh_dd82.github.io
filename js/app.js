@@ -10,10 +10,22 @@ async function loadPosts() {
         
         posts.forEach(post => {
             const li = document.createElement('li');
+            li.className = 'post-card';
             li.innerHTML = `
-                <h2><a href="post.html?file=${post.file}">${post.title}</a></h2>
-                <p>${post.date} | ${post.tags.join(', ')}</p>
-                <p>${post.excerpt}</p>
+                <div class="post-card-image">
+                    <img src="${post.thumbnail || 'images/default-thumbnail.png'}" alt="${post.title}">
+                </div>
+                <div class="post-card-content">
+                    <div class="post-meta">
+                        <span class="post-category">${post.category}</span>
+                        <span class="post-date">${post.date}</span>
+                    </div>
+                    <h2 class="post-title"><a href="post.html?slug=${post.slug}">${post.title}</a></h2>
+                    <p class="post-summary">${post.summary}</p>
+                    <div class="post-tags">
+                        ${post.tags.map(tag => `<span class="tag">#${tag}</span>`).join(' ')}
+                    </div>
+                </div>
             `;
             postList.appendChild(li);
         });

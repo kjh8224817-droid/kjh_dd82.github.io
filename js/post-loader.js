@@ -1,14 +1,14 @@
 async function loadPost() {
     const urlParams = new URLSearchParams(window.location.search);
-    const fileName = urlParams.get('file');
+    const slug = urlParams.get('slug');
     
-    if (!fileName) {
+    if (!slug) {
         document.getElementById('post-content').innerHTML = '<p>게시글을 찾을 수 없습니다.</p>';
         return;
     }
 
     try {
-        const response = await fetch(`pages/${fileName}`);
+        const response = await fetch(`pages/${slug}.md`);
         if (!response.ok) throw new Error('게시글 로딩 실패');
         
         let content = await response.text();
@@ -18,6 +18,9 @@ async function loadPost() {
         if (frontMatterMatch) {
             content = frontMatterMatch[2];
         }
+
+        // 이미지 경로 수정 (../images/ -> images/)
+        content = content.replace(/\.\.\/images\//g, 'images/');
 
         // marked.js로 변환 후 렌더링
         document.getElementById('post-content').innerHTML = marked.parse(content);
