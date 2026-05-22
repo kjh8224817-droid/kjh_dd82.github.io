@@ -38,5 +38,24 @@
     
     <script src="js/theme.js"></script>
     <script src="js/post-loader.js"></script>
+
+    <!-- ===== 포트폴리오 AI 챗봇 ===== -->
+    <script>
+      window.ChatWidgetConfig = {
+        webhook: {
+          url: 'https://kjh82248.app.n8n.cloud/webhook-test/chat'
+        },
+        branding: {
+          name: 'Portfolio AI',
+          welcomeText: '안녕하세요! 저에 대해 궁금한 점을 물어보세요 😊',
+          responseTimeText: '잠시 후 답변드릴게요'
+        },
+        style: {
+          primaryColor: '#5c6bc0',
+          position: 'right'
+        }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/juansebsol/n8n-chatbot-template@latest/chat-widget.js"></script>
 </body>
 </html>

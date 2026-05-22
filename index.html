@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>개발 블로그</title>
+    <title>My GitHub Blog</title>
     <link rel="stylesheet" href="css/style.css?v=1.1">
     <!-- Prism.js CSS (CDN) -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
 </head>
+
 <body>
     <header>
         <h1><a href="index.html">My Blog</a></h1>
@@ -16,7 +18,7 @@
             <button id="theme-toggle">🌗</button>
         </div>
     </header>
-    
+
     <main>
         <div id="tag-filter"></div>
         <ul id="post-list">
@@ -32,9 +34,29 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <!-- Prism.js (CDN) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    
+
     <script src="js/theme.js"></script>
     <script src="js/search.js"></script>
     <script src="js/app.js"></script>
+
+    <!-- ===== 포트폴리오 AI 챗봇 ===== -->
+    <script>
+        window.ChatWidgetConfig = {
+            webhook: {
+                url: 'https://kjh82248.app.n8n.cloud/webhook-test/chat'
+            },
+            branding: {
+                name: 'Portfolio AI',
+                welcomeText: '안녕하세요! 저에 대해 궁금한 점을 물어보세요 😊',
+                responseTimeText: '잠시 후 답변드릴게요'
+            },
+            style: {
+                primaryColor: '#5c6bc0',
+                position: 'right'
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/juansebsol/n8n-chatbot-template@latest/chat-widget.js"></script>
 </body>
+
 </html>
